@@ -50,7 +50,7 @@ on fs
     exec /sbin/lvm vgchange -aly --ignorelockingfailure
 
     # Mount /cust always to have boot.img and recovery.img fake parts
-    mount vfat /dev/block/platform/msm_sdcc.2/by-num/p1 /cust
+    mount vfat /dev/block/platform/soc/soc:amba/by-num/p1 /cust
 
     mount_all ./fstab.qcom
 

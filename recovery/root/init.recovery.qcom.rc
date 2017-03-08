@@ -39,7 +39,7 @@ on fs
     exec /sbin/lvm vgchange -aly --ignorelockingfailure
 
     # Mount /cust always to have boot.img and recovery.img fake parts
-    mount vfat /dev/block/platform/msm_sdcc.2/by-num/p1 /cust
+    mount vfat /dev/block/platform/soc/soc:amba/by-num/p1 /cust
     exec /sbin/truncate /cust/image/boot.img -s 20M
     exec /sbin/truncate /cust/image/recovery.img -s 20M
     exec /sbin/losetup /dev/block/loop0 /cust/image/boot.img
