@@ -60,6 +60,7 @@ TARGET_KERNEL_SOURCE := kernel/huawei/msm7x30
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
