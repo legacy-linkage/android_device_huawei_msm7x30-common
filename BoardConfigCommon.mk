@@ -56,7 +56,7 @@ USE_DEVICE_SPECIFIC_GPS := true
 
 # Kernel
 TARGET_NO_KERNEL := false
-TARGET_KERNEL_SOURCE := kernel/huawei/msm7x30
+TARGET_KERNEL_SOURCE := kernel/qcom/msm7x30
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_KERNEL_PAGESIZE := 4096
