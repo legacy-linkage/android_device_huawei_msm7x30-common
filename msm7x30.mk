@@ -58,25 +58,8 @@ PRODUCT_PACKAGES += \
 	libboringssl-compat \
 	libstlport
 
-# OMX libraries
-PRODUCT_PACKAGES += \
-	libstagefrighthw \
-	libOmxCore \
-	libOmxVdec \
-	libOmxVenc
-
-# Audio libraries
-PRODUCT_PACKAGES += \
-	libaudio-resampler \
-	libaudioutils
-
 # HAL
 PRODUCT_PACKAGES += \
-	audio.a2dp.default \
-	audio.primary.msm7x30 \
-	audio.r_submix.default \
-	audio.usb.default \
-	camera.msm7x30 \
 	copybit.msm7x30 \
 	gralloc.msm7x30 \
 	gps.msm7x30 \
@@ -133,6 +116,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	debug.mdpcomp.maxlayer=3 \
 	debug.mdpcomp.idletime=-1 \
 	persist.sys.force_highendgfx=true
+
+ADDITIONAL_DEFAULT_PROPERTIES += \
+	ro.adb.secure=0 \
+	ro.secure=0 \
+	ro.debuggable=1
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.usb.config=mtp,adb
 
 # Include proprietary stuff
 $(call inherit-product, vendor/huawei/msm7x30-common/msm7x30-common-vendor.mk)
