@@ -54,6 +54,8 @@ on fs
 
     mount_all ./fstab.qcom
 
+    exec /system/bin/truncate /cust/image/boot.img -s 20M
+    exec /system/bin/truncate /cust/image/recovery.img -s 20M
     exec /system/bin/losetup /dev/block/loop0 /cust/image/boot.img
     exec /system/bin/losetup /dev/block/loop1 /cust/image/recovery.img
 

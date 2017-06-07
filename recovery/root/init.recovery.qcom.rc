@@ -29,6 +29,8 @@ on fs
 
     # Mount /cust always to have boot.img and recovery.img fake parts
     mount vfat /dev/block/platform/msm_sdcc.2/by-num/p1 /cust
+    exec /sbin/truncate /cust/image/boot.img -s 20M
+    exec /sbin/truncate /cust/image/recovery.img -s 20M
     exec /sbin/losetup /dev/block/loop0 /cust/image/boot.img
     exec /sbin/losetup /dev/block/loop1 /cust/image/recovery.img
 
