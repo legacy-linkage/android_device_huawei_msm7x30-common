@@ -83,6 +83,8 @@ PRODUCT_PACKAGES += \
 	hostapd \
 	hwprops \
 	fstab.qcom \
+	fstab.qcom.lvm \
+	init.fs.sh \
 	init.qcom.rc \
 	init.qcom.usb.rc \
 	ueventd.qcom.rc \
