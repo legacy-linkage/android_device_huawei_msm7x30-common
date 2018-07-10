@@ -135,5 +135,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	debug.mdpcomp.idletime=-1 \
 	persist.sys.force_highendgfx=true
 
+ifeq ($(PRODUCT_PROPERTY_DEFAULT_ADB_DEBUGGING),true)
+	ADDITIONAL_DEFAULT_PROPERTIES += \
+		ro.adb.secure=0 \
+		ro.secure=0 \
+		ro.debuggable=1
+
+	PRODUCT_PROPERTY_OVERRIDES += \
+		persist.sys.usb.config=mtp,adb
+endif
+
 # Include proprietary stuff
 $(call inherit-product, vendor/huawei/msm7x30-common/msm7x30-common-vendor.mk)
