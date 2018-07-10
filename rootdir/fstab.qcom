@@ -9,7 +9,7 @@
 /dev/lvpool/cache                            /cache       f2fs    nosuid,nodev,noatime,inline_xattr,flush_merge,data_flush    wait,check,formattable
 /dev/lvpool/cache                            /cache       ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc              wait,check,formattable
 /dev/lvpool/misc                             /misc        emmc    defaults                                                    defaults
-/dev/block/platform/msm_sdcc.2/by-num/p1     /cust        vfat    ro                                                          defaults
+/dev/block/mmcblk0p1                         /cust        vfat    ro                                                          defaults
 
 /dev/null                                    /boot        emmc    defaults                                                    recoveryonly
 /dev/null                                    /recovery    emmc    defaults                                                    recoveryonly

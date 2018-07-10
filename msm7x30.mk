@@ -92,6 +92,7 @@ PRODUCT_PACKAGES += \
 	hostapd \
 	hwprops \
 	fstab.qcom \
+	fstab.qcom.std \
 	init.qcom.rc \
 	init.qcom.usb.rc \
 	ueventd.qcom.rc \
